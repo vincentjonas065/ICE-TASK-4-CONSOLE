@@ -6,6 +6,90 @@
   <title>ProjectPilot | Study Desk</title>
   <link rel="stylesheet" href="./ICE TASK 4 CONSOLE/css/styles.css">
 </head>
+<script>
+  const taskData = {
+    q1: {
+      title: "Question 1",
+      priority: "Completed",
+      description: "Explain the purpose and importance of the ProjectPilot workspace.",
+      progress: "1 of 4 tasks",
+      due: "Completed",
+      dueDate: "Submitted",
+      label: "QUESTION 1 · COMPLETED RESPONSE",
+      heading: "ProjectPilot main workspace",
+      text: "ProjectPilot gives students one digital study desk where they can plan tasks, read research, write answers and monitor progress without switching between multiple windows.",
+      pdf: "Assignment-brief.docx",
+      pdfDetails: "General instructions · Linked to Question 1",
+      author: "NOTE · ETHAN",
+      note: "Check that the introduction explains the one-screen challenge."
+    },
+
+    q2: {
+      title: "Question 2",
+      priority: "High priority",
+      description: "Analyse the effects of digital distraction on student productivity.",
+      progress: "1 of 4 tasks",
+      due: "Tomorrow",
+      dueDate: "17 Oct · 23:59",
+      label: "QUESTION 2 · DRAFT RESPONSE",
+      heading: "Digital distraction and student productivity",
+      text: "Digital devices support research and collaboration, but constant notifications and rapid task-switching can interrupt deep concentration. ProjectPilot reduces this friction by keeping the question, relevant research and writing space together.",
+      pdf: "Digital-distraction-study.pdf",
+      pdfDetails: "12 pages · Linked to Question 2",
+      author: "NOTE · VINCENT",
+      note: "Use the highlighted finding as evidence in paragraph two."
+    },
+
+    q3: {
+      title: "Question 3",
+      priority: "Medium priority",
+      description: "Describe how students interact with ProjectPilot functions.",
+      progress: "1 of 4 tasks",
+      due: "18 October",
+      dueDate: "18 Oct · 23:59",
+      label: "QUESTION 3 · DRAFT RESPONSE",
+      heading: "How users interact with ProjectPilot",
+      text: "Students select a task from the left panel, write in the centre area, and view linked notes and resources on the right. This keeps work organised in a single main workspace.",
+      pdf: "Student-interaction-notes.pdf",
+      pdfDetails: "8 pages · Linked to Question 3",
+      author: "NOTE · MNQWENO",
+      note: "Mention task dragging, search and the focus timer."
+    },
+
+    review: {
+      title: "Final review",
+      priority: "Not started",
+      description: "Review all answers before the group submits the project.",
+      progress: "1 of 4 tasks",
+      due: "20 October",
+      dueDate: "20 Oct · 23:59",
+      label: "FINAL REVIEW · CHECKLIST",
+      heading: "Final project review",
+      text: "Check that all questions are complete, references are correct, group responsibilities are clear and every uploaded file is ready for submission.",
+      pdf: "Marking-rubric.pdf",
+      pdfDetails: "2 pages · Linked to Final Review",
+      author: "NOTE · GROUP",
+      note: "Confirm every rubric requirement is demonstrated."
+    }
+  };
+
+  const selectedTask = new URLSearchParams(window.location.search).get("task") || "q2";
+  const task = taskData[selectedTask] || taskData.q2;
+
+  document.getElementById("taskTitle").childNodes[0].nodeValue = task.title + " ";
+  document.getElementById("taskPriority").textContent = task.priority;
+  document.getElementById("taskDescription").textContent = task.description;
+  document.getElementById("taskProgress").textContent = task.progress;
+  document.getElementById("taskDue").textContent = task.due;
+  document.getElementById("taskDueDate").textContent = task.dueDate;
+  document.getElementById("draftLabel").textContent = task.label;
+  document.getElementById("draftHeading").textContent = task.heading;
+  document.getElementById("draftText").textContent = task.text;
+  document.getElementById("pdfName").textContent = task.pdf;
+  document.getElementById("pdfDetails").textContent = task.pdfDetails;
+  document.getElementById("noteAuthor").textContent = task.author;
+  document.getElementById("noteText").textContent = task.note;
+</script>
 <body>
   <header class="top">
     <a href="index.html" class="brand"><b>P</b>ProjectPilot</a>
