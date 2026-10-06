@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IT Access Console</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-left">
+            <div class="app-logo">IT</div>
+            <span>IT System & Cyber Access Console</span>
+        </div>
+        <div class="window-controls">
+            <button class="win-btn">−</button>
+            <button class="win-btn">□</button>
+            <button class="win-btn close">✕</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div class="nav-rail">
+            <div class="nav-section">
+                <a href="dashboard.html" class="nav-item active">
+                    <div class="nav-icon">📊</div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <div class="nav-icon">⚙️</div>
+                    <span>Operations</span>
+                </a>
+                <a href="users.html" class="nav-item">
+                    <div class="nav-icon">👥</div>
+                    <span>User Management</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <div class="workspace-header">
+                <div class="workspace-title">System Dashboard</div>
+                <div class="header-controls">
+                    <div class="security-badge">
+                        <span>✓</span>
+                        <span>Role: System Admin [Authenticated]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workspace-content">
+                <div class="alert alert-info">
+                    ✓ System health nominal. All critical services operational. Last full system audit: 2 hours ago.
+                </div>
+
+                <div class="section-title">System Health Metrics</div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">CPU Load</div>
+                        <div class="metric-value">68%</div>
+                        <div class="metric-status">Normal operation</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Memory Usage</div>
+                        <div class="metric-value">71%</div>
+                        <div class="metric-status">Stable</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Network Traffic</div>
+                        <div class="metric-value">2.3 Gbps</div>
+                        <div class="metric-status">Optimal</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">System Uptime</div>
+                        <div class="metric-value">347 days</div>
+                        <div class="metric-status">Excellent</div>
+                    </div>
+                </div>
+
+                <div class="section-title">Active Security Incidents</div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Incident ID</th>
+                            <th>Type</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+                            <th>Detected</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INC-2024-001</td>
+                            <td>Unusual Login Pattern</td>
+                            <td><span class="status-badge pending">Medium</span></td>
+                            <td><span class="status-badge pending">Investigating</span></td>
+                            <td>Jan 9, 14:22</td>
+                        </tr>
+                        <tr>
+                            <td>INC-2024-002</td>
+                            <td>Failed Auth Attempts</td>
+                            <td><span class="status-badge active">Low</span></td>
+                            <td><span class="status-badge active">Resolved</span></td>
+                            <td>Jan 8, 09:15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

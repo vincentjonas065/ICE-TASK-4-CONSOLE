@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - IT Access Console</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-left">
+            <div class="app-logo">IT</div>
+            <span>IT System & Cyber Access Console</span>
+        </div>
+        <div class="window-controls">
+            <button class="win-btn">−</button>
+            <button class="win-btn">□</button>
+            <button class="win-btn close">✕</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div class="nav-rail">
+            <div class="nav-section">
+                <a href="dashboard.html" class="nav-item">
+                    <div class="nav-icon">📊</div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="services.html" class="nav-item active">
+                    <div class="nav-icon">⚙️</div>
+                    <span>Operations</span>
+                </a>
+                <a href="users.html" class="nav-item">
+                    <div class="nav-icon">👥</div>
+                    <span>User Management</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <div class="workspace-header">
+                <div class="workspace-title">Operations Management</div>
+                <div class="header-controls">
+                    <div class="security-badge">
+                        <span>✓</span>
+                        <span>Role: System Admin [Authenticated]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workspace-content">
+                <div class="alert alert-warning">
+                    ⚠ 1 service restart scheduled for maintenance window: Database Cluster (Jan 15, 02:00 UTC)
+                </div>
+
+                <div class="section-title">Active Services</div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Service Name</th>
+                            <th>Status</th>
+                            <th>CPU</th>
+                            <th>Memory</th>
+                            <th>Instances</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>API Server Cluster</td>
+                            <td><span class="status-badge active">Running</span></td>
+                            <td>34%</td>
+                            <td>2.1 GB</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Database Primary</td>
+                            <td><span class="status-badge active">Running</span></td>
+                            <td>52%</td>
+                            <td>8.7 GB</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Cache Layer (Redis)</td>
+                            <td><span class="status-badge active">Running</span></td>
+                            <td>12%</td>
+                            <td>1.3 GB</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Backup Job Queue</td>
+                            <td><span class="status-badge pending">Idle</span></td>
+                            <td>0%</td>
+                            <td>256 MB</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
